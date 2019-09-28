@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "eda34f338fdcabe1ddebb9793d0b2715",
+    "content-hash": "b67642d60b34a9172d9b002444c4bd3b",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -57,6 +57,39 @@
                 "stack"
             ],
             "time": "2017-12-20T14:37:45+00:00"
+        },
+        {
+            "name": "awt/apilogger",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aungwinthant/apilogger.git",
+                "reference": "4726bc2eb7332f16e88536911490e38cbddbf0aa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aungwinthant/apilogger/zipball/4726bc2eb7332f16e88536911490e38cbddbf0aa",
+                "reference": "4726bc2eb7332f16e88536911490e38cbddbf0aa",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "AWT\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "aung win thant",
+                    "email": "agwinthant@gmail.com"
+                }
+            ],
+            "description": "Small laravel package for viewing api logs which can be used in debugging.",
+            "time": "2019-09-20T18:57:38+00:00"
         },
         {
             "name": "barryvdh/laravel-cors",
@@ -5045,7 +5078,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "awt/apilogger": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

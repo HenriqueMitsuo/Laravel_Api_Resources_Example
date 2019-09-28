@@ -22,9 +22,9 @@ use Illuminate\Http\Request;
  */
 
 // List all articles
-Route::get('articles', 'ArticleController@index')->middleware('cors');
+Route::get('articles', 'ArticleController@index')->middleware('cors', 'apilogger');
 // List one article
-Route::get('article/{id}', 'ArticleController@show');
+Route::get('article/{id}', 'ArticleController@show')->middleware('cors', 'apilogger');
 // Create new article
 Route::post('article', 'ArticleController@store');
 // Update article
