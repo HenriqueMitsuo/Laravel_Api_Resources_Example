@@ -22,7 +22,7 @@ use Illuminate\Http\Request;
  */
 
 // List all articles
-Route::get('articles', 'ArticleController@index');
+Route::get('articles', 'ArticleController@index')->middleware('cors');
 // List one article
 Route::get('article/{id}', 'ArticleController@show');
 // Create new article
@@ -36,8 +36,8 @@ Route::delete('article/{id}', 'ArticleController@destroy');
  * User Routes
  */
 // Rota para teste
-Route::get('user/{id}', 'UserController@show')->middleware('jwt');
+Route::get('user/{id}', 'UserController@show')->middleware('jwt','cors');
 
-Route::post('user', 'UserController@store');
-Route::post('user/login', 'UserController@login');
+Route::post('user', 'UserController@store')->middleware('cors');
+Route::post('user/login', 'UserController@login')->middleware('cors');
 
