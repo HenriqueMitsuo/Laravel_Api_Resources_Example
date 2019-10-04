@@ -24,9 +24,9 @@ use Illuminate\Http\Request;
 // List all articles
 Route::get('articles', 'ArticleController@index')->middleware('cors');
 // List one article
-Route::get('article/{id}', 'ArticleController@show');
+Route::get('article/{id}', 'ArticleController@show')->middleware('cors');
 // Create new article
-Route::post('article', 'ArticleController@store');
+Route::post('article', 'ArticleController@store')->middleware('cors');
 // Update article
 Route::put('article', 'ArticleController@store');
 // Delete article
